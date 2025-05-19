@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-max-width: 1320px;
+
+  --color-soft-white: #f7e3df;
+  --color-soft-yellow: #f4ec75;
+  --color-soft-orange: #f68381;
+  --color-soft-cyan: #80d2ba;
+  --color-soft-purple: #f184dc;
+
+  --color-hard-purple: #7938b1;
+  --color-hard-cyan: #226d6d;
+  --color-hard-pink: #e12a72;
+
+  --section-top-down-padding: 50px;
+
+  --border-radius: 15px;
+
+  --transition: 0.4s ease-in-out;
+
+  --profile-gap: 15px;
+}
+
+body {
+  background-color: var(--color-soft-white);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.all-error {
+  color: var(--color-hard-pink);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input[type="submit"]:enabled {
+  cursor: pointer;
+}
+
+.todo-title {
+  color: var(--color-hard-cyan);
+  padding: var(--section-top-down-padding);
+  text-align: center;
+  font-size: 46px;
+}
+
+.todo-list {
+  padding: var(--section-top-down-padding);
+}
+
+.todo-list-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  color: var(--color-hard-pink);
+  text-align: center;
+  font-size: 28px;
+}
+
+.individual-todo-item {
+  background-color: var(--color-soft-yellow);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px 0 black;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-name {
+  color: var(--color-hard-purple);
+  text-align: center;
+  font-size: 24px;
+}
+
+.todo-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-todo {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  transform: translateX(-100%);
+}
+
+#todo-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+#todo-form input {
+  padding: 10px;
+}
+
+input[type="submit"]:enabled {
+  cursor: pointer;
+  background-color: var(--color-hard-cyan);
+  color: var(--color-soft-white);
+}
+
+.done-list .todo-name {
+  text-decoration: line-through;
+}
+
+.done-list {
+  background-color: var(--color-soft-orange);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: black;
+}
